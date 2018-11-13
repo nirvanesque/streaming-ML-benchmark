@@ -28,3 +28,7 @@ lxml== 4.1.1
 bs4== 4.6.0
 html5lib== 0.9999999
 sqlalchemy== 1.2.1
+kafka-python==1.4.4.dev0
+tweepy==3.6.0
+requests-oauthlib==1.0.0
+oauthlib==3.0.0.dev0
