@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # ------------------------------------------------------------------
-#  Author : Baruch AMOUSSOU-DJANGBAN
-#           Data Scientist 
+#  Authors : Anirvan BASU, Baruch AMOUSSOU-DJANGBAN
 # ------------------------------------------------------------------
 
 # --> Packages python 

@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # ------------------------------------------------------------------
-#  Author : Baruch AMOUSSOU-DJANGBAN
-#           Data Scientist
+#  Authors : Anirvan BASU, Baruch AMOUSSOU-DJANGBAN
 # ------------------------------------------------------------------
 
 import tweepy
@@ -10,16 +9,18 @@ from tweepy import OAuthHandler
 from tweepy import Stream
 from tweepy.streaming import StreamListener
 
+# Read parameters from config.yml - needs to be implemented / modified
+
 # Key Token 
-consumer_key = 'dtSibnNrCzluG3VOy3joXyd4V'
-consumer_secret = 'l4wl5YCP7IoGfhOYf15VeJEGFd6RiGOLnqFxiXjKetfC3la3CR'
-access_token = '2843636385-eVSmWPZ9bUPzX28IzguOeFfK5QQeOrrMSIv4xjK'
-access_secret = 'SYaWcVqZdNrwclcS3jsYqYZXdyfUanTaUAomJoIITXj9A'
+consumer_key = '<<consumer key>>'
+consumer_secret = '<<consumer secret>>'
+access_token = '<<access token>>'
+access_secret = '<<access secret>>'
  
 # Initialise api
 auth = OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_secret)
-api = tweepy.API(auth, proxy="https://proxydigital.jcdecaux.com:8000")
+api = tweepy.API(auth, proxy="<<enter proxy+port here>>")
 
 for status in tweepy.Cursor(api.home_timeline).items(10):
     # Process a single status
@@ -45,7 +46,8 @@ class MyListener(StreamListener):
         return True
  
 twitter_stream = Stream(auth, MyListener())
-twitter_stream.filter(track=['#Jcdecaux'])
+# Add Twitter track - implement
+twitter_stream.filter(track=['<<track>>'])
                              
 
 
